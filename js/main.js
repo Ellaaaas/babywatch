@@ -108,13 +108,15 @@
     update();
   }
 
-  /* ---------- Partner form (placeholder: no backend yet) ---------- */
-  const form = $("#partnerForm");
-  if (form) {
+  /* ---------- Forms (placeholders: no backend yet) ---------- */
+  [["#partnerForm", ".pform__ok"], ["#waitlistForm", ".wlform__ok"]].forEach(([sel, okSel]) => {
+    const form = $(sel);
+    if (!form) return;
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       $$("input, select, button", form).forEach((el) => (el.disabled = true));
-      $(".pform__ok", form).hidden = false;
+      const note = $(".wlform__note", form); if (note) note.hidden = true;
+      $(okSel, form).hidden = false;
     });
-  }
+  });
 })();
