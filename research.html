@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/research.css">
 </head>
-<body>
+<body data-page="research">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="nav" id="nav">
@@ -19,119 +19,113 @@
         <span class="brand__name">BabyWatch<span class="brand__ai">AI</span></span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary">
-        <a href="index.html#product">Product</a>
-        <a href="index.html#technology">Technology</a>
-        <a href="index.html#intelligence">Intelligence</a>
-        <a href="index.html#privacy">Safety &amp; Privacy</a>
-        <a href="research.html" aria-current="page">Research</a>
-        <a href="index.html#partners">Partners</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#partners" class="btn btn--sm btn--primary nav__cta">Partner With Us</a>
+        <a href="index.html#product" data-i18n="nav.product">Product</a>
+        <a href="index.html#technology" data-i18n="nav.technology">Technology</a>
+        <a href="index.html#intelligence" data-i18n="nav.intelligence">Intelligence</a>
+        <a href="index.html#privacy" data-i18n="nav.privacy">Safety &amp; Privacy</a>
+        <a href="research.html" aria-current="page" data-i18n="nav.research">Research</a>
+        <a href="index.html#partners" data-i18n="nav.partners">Partners</a>
+        <a href="index.html#about" data-i18n="nav.about">About</a>
+        <a href="index.html#partners" class="btn btn--sm btn--primary nav__cta" data-i18n="nav.cta">Partner With Us</a>
       </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+      <div class="nav__right">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+        </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <section class="rhero">
       <div class="container">
-        <p class="kicker">Research &amp; Insights</p>
-        <h1 class="display">Understanding the market we are building for.</h1>
-        <p class="lede">Internal research from the BabyWatch team on the infant monitoring landscape, the technology shift from detection to understanding, and what parents actually need.</p>
+        <p class="kicker" data-i18n="r.kicker">Research &amp; Insights</p>
+        <h1 class="display" data-i18n="r.title">Understanding the market we are building for.</h1>
+        <p class="lede" data-i18n="r.lede">Internal research from the BabyWatch team on the infant monitoring landscape, the technology shift from detection to understanding, and what parents actually need.</p>
         <nav class="rtoc" aria-label="On this page">
-          <a href="#landscape">01 Market landscape</a>
-          <a href="#china-us">02 China vs. US</a>
-          <a href="#trends">03 Technology trends</a>
-          <a href="#consumers">04 Consumer insights</a>
+          <a href="#landscape" data-i18n="r.toc1">01 Market landscape</a>
+          <a href="#china-us" data-i18n="r.toc2">02 China vs. US</a>
+          <a href="#trends" data-i18n="r.toc3">03 Technology trends</a>
+          <a href="#consumers" data-i18n="r.toc4">04 Consumer insights</a>
         </nav>
       </div>
     </section>
 
-    <!-- 01 Landscape -->
     <section class="section" id="landscape" aria-labelledby="landscape-title">
       <div class="container">
         <div class="section__head">
-          <p class="kicker">01 · Market landscape</p>
-          <h2 id="landscape-title" class="h-xl">Leading infant monitors, and where intelligence is still missing.</h2>
-          <p class="section__lede">The best-selling products in the US and China define parents' current expectations. Most are cameras first. Few interpret what they see.</p>
+          <p class="kicker" data-i18n="r1.kicker">01 · Market landscape</p>
+          <h2 id="landscape-title" class="h-xl" data-i18n="r1.title">Leading infant monitors, and where intelligence is still missing.</h2>
+          <p class="section__lede" data-i18n="r1.lede">The best-selling products in the US and China define parents' current expectations. Most are cameras first. Few interpret what they see.</p>
         </div>
         <div class="market-tabs" role="tablist">
-          <button class="mtab is-active" role="tab" data-market="us" aria-selected="true">United States</button>
-          <button class="mtab" role="tab" data-market="cn" aria-selected="false">China</button>
+          <button class="mtab is-active" role="tab" data-market="us" aria-selected="true" data-i18n="r.tab.us">United States</button>
+          <button class="mtab" role="tab" data-market="cn" aria-selected="false" data-i18n="r.tab.cn">China</button>
         </div>
         <p class="market-note" id="marketNote"></p>
-        <div class="table-wrap">
-          <table class="rtable" id="landscapeTable"></table>
-        </div>
-        <p class="footnote">Positioning and price ranges are indicative, compiled from public listings and reviews for internal research. They are not endorsements and are subject to change.</p>
+        <div class="table-wrap"><table class="rtable" id="landscapeTable"></table></div>
+        <p class="footnote" data-i18n="r1.note">Positioning and price ranges are indicative, compiled from public listings and reviews for internal research. They are not endorsements and are subject to change.</p>
       </div>
     </section>
 
-    <!-- 02 China vs US -->
     <section class="section section--alt" id="china-us" aria-labelledby="cu-title">
       <div class="container">
         <div class="section__head">
-          <p class="kicker">02 · China vs. US</p>
-          <h2 id="cu-title" class="h-xl">Two markets, two definitions of "smart".</h2>
-          <p class="section__lede">The US premium segment is defined by health data and AI sleep analytics. China's mainstream is defined by smart-home ecosystems and extreme value. Neither has delivered true infant intelligence.</p>
+          <p class="kicker" data-i18n="r2.kicker">02 · China vs. US</p>
+          <h2 id="cu-title" class="h-xl" data-i18n="r2.title">Two markets, two definitions of "smart".</h2>
+          <p class="section__lede" data-i18n="r2.lede">The US premium segment is defined by health data and AI sleep analytics. China's mainstream is defined by smart-home ecosystems and extreme value. Neither has delivered true infant intelligence.</p>
         </div>
         <div class="diffs" id="diffGrid"></div>
         <div class="price-panel">
-          <div class="price-col">
-            <h3>United States · USD</h3>
-            <div class="price-list" id="priceUS"></div>
-          </div>
-          <div class="price-col">
-            <h3>China · CNY</h3>
-            <div class="price-list" id="priceCN"></div>
-          </div>
+          <div class="price-col"><h3 data-i18n="r2.us">United States · USD</h3><div class="price-list" id="priceUS"></div></div>
+          <div class="price-col"><h3 data-i18n="r2.cn">China · CNY</h3><div class="price-list" id="priceCN"></div></div>
         </div>
         <div class="kpis" id="priceSummary"></div>
       </div>
     </section>
 
-    <!-- 03 Trends -->
     <section class="section section--dark" id="trends" aria-labelledby="trends-title">
       <div class="container">
         <div class="section__head">
-          <p class="kicker kicker--light">03 · Technology trends</p>
-          <h2 id="trends-title" class="h-xl">From detection to interpretation.</h2>
-          <p class="section__lede">Six shifts shaping the next generation of infant monitoring, and the thesis behind BabyWatch.</p>
+          <p class="kicker kicker--light" data-i18n="r3.kicker">03 · Technology trends</p>
+          <h2 id="trends-title" class="h-xl" data-i18n="r3.title">From detection to interpretation.</h2>
+          <p class="section__lede" data-i18n="r3.lede">Six shifts shaping the next generation of infant monitoring, and the thesis behind BabyWatch.</p>
         </div>
         <ol class="trends" id="trendList"></ol>
       </div>
     </section>
 
-    <!-- 04 Consumers -->
     <section class="section" id="consumers" aria-labelledby="consumers-title">
       <div class="container">
         <div class="section__head">
-          <p class="kicker">04 · Consumer insights</p>
-          <h2 id="consumers-title" class="h-xl">What parents need, and the gap no product fills.</h2>
+          <p class="kicker" data-i18n="r4.kicker">04 · Consumer insights</p>
+          <h2 id="consumers-title" class="h-xl" data-i18n="r4.title">What parents need, and the gap no product fills.</h2>
         </div>
         <div class="kpis" id="statTiles"></div>
         <div class="chart-row">
           <div class="chart-card">
             <div class="chart-card__head">
-              <h3>China smart infant monitoring market size</h3>
-              <span class="mono">RMB 100M · 2022–2028E · illustrative</span>
+              <h3 data-i18n="r4.chart">China smart infant monitoring market size</h3>
+              <span class="mono" data-i18n="r4.chartmeta">RMB 100M · 2022–2028E · illustrative</span>
             </div>
             <div class="chart" id="marketChart" role="img" aria-label="Bar chart of illustrative China smart infant monitoring market size growing from 2022 to 2028"></div>
-            <p class="chart-note">An illustrative projection used for internal planning. Growth is driven primarily by premium AI-enabled products.</p>
+            <p class="chart-note" data-i18n="r4.chartnote">An illustrative projection used for internal planning. Growth is driven primarily by premium AI-enabled products.</p>
           </div>
           <div class="outlook" id="outlook"></div>
         </div>
-        <p class="footnote">Market figures are illustrative estimates for internal planning and have not been independently verified.</p>
+        <p class="footnote" data-i18n="r4.note">Market figures are illustrative estimates for internal planning and have not been independently verified.</p>
       </div>
     </section>
 
     <section class="final">
       <div class="container">
-        <p class="kicker">BabyWatch AI</p>
-        <h2 class="display">The future of infant care is intelligent.</h2>
+        <p class="kicker" data-i18n="final.kicker">BabyWatch AI</p>
+        <h2 class="display" data-i18n="final.title">The future of infant care is intelligent.</h2>
         <div class="cta-row cta-row--center">
-          <a href="index.html#technology" class="btn btn--primary">Explore the Technology</a>
-          <a href="index.html#partners" class="btn btn--ghost">Partner With Us</a>
+          <a href="index.html#technology" class="btn btn--primary" data-i18n="final.cta1">Explore the Technology</a>
+          <a href="index.html#partners" class="btn btn--ghost" data-i18n="final.cta2">Partner With Us</a>
         </div>
       </div>
     </section>
@@ -139,11 +133,12 @@
 
   <footer class="footer">
     <div class="container footer__legal">
-      <p>BabyWatch is not a medical device and is not intended to diagnose, treat, cure or prevent any disease or condition. Research content reflects the views of the BabyWatch team and is provided for informational purposes only.</p>
-      <p>© 2026 BabyWatch AI. All rights reserved. · <a href="index.html">Home</a></p>
+      <p data-i18n="r.legal">BabyWatch is not a medical device and is not intended to diagnose, treat, cure or prevent any disease or condition. Research content reflects the views of the BabyWatch team and is provided for informational purposes only.</p>
+      <p><span data-i18n="foot.copy">© 2026 BabyWatch AI. All rights reserved.</span> · <a href="index.html" data-i18n="foot.home">Home</a></p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/research-data.js"></script>
   <script src="js/research.js"></script>
   <script src="js/main.js"></script>

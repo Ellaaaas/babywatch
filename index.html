@@ -10,7 +10,7 @@
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ================= NAVIGATION ================= -->
@@ -21,18 +21,24 @@
         <span class="brand__name">BabyWatch<span class="brand__ai">AI</span></span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary">
-        <a href="#product">Product</a>
-        <a href="#technology">Technology</a>
-        <a href="#intelligence">Intelligence</a>
-        <a href="#privacy">Safety &amp; Privacy</a>
-        <a href="research.html">Research</a>
-        <a href="#partners">Partners</a>
-        <a href="#about">About</a>
-        <a href="#partners" class="btn btn--sm btn--primary nav__cta">Partner With Us</a>
+        <a href="#product" data-i18n="nav.product">Product</a>
+        <a href="#technology" data-i18n="nav.technology">Technology</a>
+        <a href="#intelligence" data-i18n="nav.intelligence">Intelligence</a>
+        <a href="#privacy" data-i18n="nav.privacy">Safety &amp; Privacy</a>
+        <a href="research.html" data-i18n="nav.research">Research</a>
+        <a href="#partners" data-i18n="nav.partners">Partners</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#partners" class="btn btn--sm btn--primary nav__cta" data-i18n="nav.cta">Partner With Us</a>
       </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span>
-      </button>
+      <div class="nav__right">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+        </div>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -43,13 +49,13 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__copy reveal">
-          <p class="eyebrow"><span class="eyebrow__dot"></span>BabyWatch AI · AI-Powered Infant Intelligence Platform</p>
-          <h1 id="hero-title" class="display">Intelligence that watches over every breath.</h1>
-          <p class="lede">An AI-powered infant intelligence platform combining computer vision, behavioral recognition, audio intelligence and environmental sensing to help parents understand their baby's world.</p>
+          <p class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="hero.eyebrow">BabyWatch AI · AI-Powered Infant Intelligence Platform</span></p>
+          <h1 id="hero-title" class="display" data-i18n="hero.title">Intelligence that watches over every breath.</h1>
+          <p class="lede" data-i18n="hero.lede">An AI-powered infant intelligence platform combining computer vision, behavioral recognition, audio intelligence and environmental sensing to help parents understand their baby's world.</p>
           <div class="cta-row">
-            <a href="#technology" class="btn btn--primary">Explore the Technology</a>
-            <a href="#demo" class="btn btn--ghost">See BabyWatch in Action</a>
-            <a href="#partners" class="btn btn--link">Partner With Us <span aria-hidden="true">→</span></a>
+            <a href="#technology" class="btn btn--primary" data-i18n="hero.cta1">Explore the Technology</a>
+            <a href="#demo" class="btn btn--ghost" data-i18n="hero.cta2">See BabyWatch in Action</a>
+            <a href="#partners" class="btn btn--link" data-i18n="hero.cta3">Partner With Us <span aria-hidden="true">→</span></a>
           </div>
         </div>
 
@@ -57,7 +63,7 @@
         <div class="hero__visual reveal" id="demo">
           <div class="monitor" role="img" aria-label="BabyWatch live intelligence dashboard showing an infant video feed with computer vision overlay, sleep state, breathing pattern, movement, room temperature, humidity and sound status">
             <div class="monitor__bar">
-              <span class="monitor__title"><span class="live"></span>Nursery · Live</span>
+              <span class="monitor__title"><span class="live"></span><span data-i18n="m.title">Nursery · Live</span></span>
               <span class="monitor__meta mono">EDGE AI · 30 FPS · 4 ms</span>
             </div>
 
@@ -70,22 +76,17 @@
                 </defs>
                 <rect width="640" height="400" fill="url(#feedBg)"/>
                 <rect width="640" height="400" fill="url(#feedLight)"/>
-                <!-- crib -->
                 <rect x="70" y="120" width="500" height="240" rx="24" fill="#1B2436" stroke="#2C3850" stroke-width="2"/>
                 <g stroke="#2C3850" stroke-width="2" opacity=".7">
                   <line x1="110" y1="120" x2="110" y2="360"/><line x1="150" y1="120" x2="150" y2="360"/><line x1="490" y1="120" x2="490" y2="360"/><line x1="530" y1="120" x2="530" y2="360"/>
                 </g>
-                <!-- mattress -->
                 <rect x="120" y="170" width="400" height="170" rx="18" fill="#232D42"/>
-                <!-- baby: blanket, head -->
                 <path d="M235 235 q60 -30 200 -10 v70 a18 18 0 0 1 -18 18 h-182 z" fill="#3A4763"/>
                 <path d="M255 245 q60 -18 160 -6" fill="none" stroke="#4A587A" stroke-width="5" stroke-linecap="round"/>
                 <circle cx="215" cy="240" r="38" fill="#8C8F98"/>
                 <path d="M182 230 q8 -32 40 -30 q32 0 38 30 q-10 -12 -38 -10 q-30 -2 -40 10z" fill="#5B5F6B"/>
                 <path d="M203 246 q6 5 12 0 M228 246 q6 5 12 0" fill="none" stroke="#4A4E5A" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- breathing pulse on chest -->
                 <circle class="breath-ring" cx="310" cy="255" r="16" fill="none" stroke="#5FD3E8" stroke-width="1.5" opacity=".6"/>
-                <!-- CV overlay: head box -->
                 <g class="cv-box" fill="none" stroke="#5FD3E8" stroke-width="2">
                   <path d="M170 196 v-14 h14 M246 182 h14 v14 M260 272 v14 h-14 M184 286 h-14 v-14"/>
                 </g>
@@ -94,97 +95,74 @@
                   <text x="170" y="172">FACE · CLEAR · 0.98</text>
                   <text x="292" y="228">POSITION · SUPINE</text>
                 </g>
-                <!-- keypoints -->
                 <g class="kp" fill="#8CE8F5">
                   <circle cx="215" cy="238" r="3"/><circle cx="300" cy="248" r="3"/><circle cx="340" cy="262" r="3"/><circle cx="395" cy="270" r="3"/><circle cx="420" cy="245" r="3"/>
                 </g>
                 <g stroke="#8CE8F5" stroke-width="1" opacity=".5"><path d="M215 238 L300 248 L340 262 L395 270 L420 245"/></g>
-                <!-- scan line -->
                 <rect class="scanline" x="0" y="0" width="640" height="60" fill="url(#scan)"/>
-                <!-- timestamp -->
                 <text x="20" y="384" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8A94A6">02:14:36 · IR · NIGHT MODE</text>
               </svg>
             </div>
 
             <div class="monitor__stats">
               <div class="stat">
-                <span class="stat__k">Sleep state</span>
-                <span class="stat__v">Deep sleep</span>
+                <span class="stat__k" data-i18n="m.sleep.k">Sleep state</span>
+                <span class="stat__v" data-i18n="m.sleep.v">Deep sleep</span>
                 <span class="stat__bar"><i style="width:82%"></i></span>
               </div>
               <div class="stat">
-                <span class="stat__k">Movement</span>
-                <span class="stat__v">Low</span>
+                <span class="stat__k" data-i18n="m.move.k">Movement</span>
+                <span class="stat__v" data-i18n="m.move.v">Low</span>
                 <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
               </div>
               <div class="stat stat--wide">
-                <span class="stat__k">Breathing pattern</span>
+                <span class="stat__k" data-i18n="m.breath.k">Breathing pattern</span>
                 <svg viewBox="0 0 240 40" class="wave" aria-hidden="true">
                   <path class="wave__base" d="M0 20 C 15 20, 20 6, 30 6 S 45 34, 60 34 S 75 6, 90 6 S 105 34, 120 34 S 135 6, 150 6 S 165 34, 180 34 S 195 6, 210 6 S 225 34, 240 34" fill="none" stroke="#2C3850" stroke-width="2"/>
                   <path class="wave__line" d="M0 20 C 15 20, 20 6, 30 6 S 45 34, 60 34 S 75 6, 90 6 S 105 34, 120 34 S 135 6, 150 6 S 165 34, 180 34 S 195 6, 210 6 S 225 34, 240 34" fill="none" stroke="#5FD3E8" stroke-width="2"/>
                 </svg>
-                <span class="stat__v stat__v--sm">Regular · <span data-live="rpm">31</span> rpm</span>
+                <span class="stat__v stat__v--sm"><span data-i18n="m.breath.v">Regular</span> · <span data-live="rpm">31</span> rpm</span>
               </div>
               <div class="stat">
-                <span class="stat__k">Room temp</span>
+                <span class="stat__k" data-i18n="m.temp.k">Room temp</span>
                 <span class="stat__v"><span data-live="temp">22.4</span>°C</span>
               </div>
               <div class="stat">
-                <span class="stat__k">Humidity</span>
+                <span class="stat__k" data-i18n="m.hum.k">Humidity</span>
                 <span class="stat__v"><span data-live="hum">48</span>%</span>
               </div>
               <div class="stat">
-                <span class="stat__k">Sound</span>
-                <span class="stat__v">Quiet · <span data-live="db">28</span> dB</span>
+                <span class="stat__k" data-i18n="m.sound.k">Sound</span>
+                <span class="stat__v"><span data-i18n="m.sound.v">Quiet</span> · <span data-live="db">28</span> dB</span>
               </div>
             </div>
 
             <div class="monitor__ai">
-              <span class="chip chip--on">SafeSleep AI · Active</span>
-              <span class="chip chip--on">CrySense AI · Listening</span>
-              <span class="chip chip--on">BreathSense · Tracking</span>
-              <span class="chip">SleepGraph · Modeling</span>
+              <span class="chip chip--on" data-i18n="m.chip1">SafeSleep AI · Active</span>
+              <span class="chip chip--on" data-i18n="m.chip2">CrySense AI · Listening</span>
+              <span class="chip chip--on" data-i18n="m.chip3">BreathSense · Tracking</span>
+              <span class="chip" data-i18n="m.chip4">SleepGraph · Modeling</span>
             </div>
           </div>
         </div>
       </div>
-      <p class="container hero__note">Interface shown is a product concept. Capabilities labeled as in development or future are not yet available.</p>
+      <p class="container hero__note" data-i18n="hero.note">Interface shown is a product concept. Capabilities labeled as in development or future are not yet available.</p>
     </section>
 
     <!-- ================= 2. WHAT IS BABYWATCH ================= -->
     <section class="section" id="product" aria-labelledby="what-title">
       <div class="container">
         <div class="section__head reveal">
-          <p class="kicker">What is BabyWatch</p>
-          <h2 id="what-title" class="h-xl">One intelligent system.<br>Multiple layers of protection.</h2>
-          <p class="section__lede">The camera is only the sensor. The real product is infant intelligence: a system that combines vision, audio, sleep, environmental and behavioral understanding into one continuous picture of your baby.</p>
+          <p class="kicker" data-i18n="what.kicker">What is BabyWatch</p>
+          <h2 id="what-title" class="h-xl" data-i18n="what.title">One intelligent system.<br>Multiple layers of protection.</h2>
+          <p class="section__lede" data-i18n="what.lede">The camera is only the sensor. The real product is infant intelligence: a system that combines vision, audio, sleep, environmental and behavioral understanding into one continuous picture of your baby.</p>
         </div>
         <ul class="layers reveal" role="list">
-          <li class="layer">
-            <span class="layer__n mono">01</span>
-            <h3>Vision Intelligence</h3>
-            <p>Real-time computer vision recognizes position, posture and movement, frame by frame.</p>
-          </li>
-          <li class="layer">
-            <span class="layer__n mono">02</span>
-            <h3>Audio Intelligence</h3>
-            <p>Sound classification separates crying, coughing and ambient noise from silence.</p>
-          </li>
-          <li class="layer">
-            <span class="layer__n mono">03</span>
-            <h3>Sleep Intelligence</h3>
-            <p>Sleep and wake states become patterns, trends and a personal baseline.</p>
-          </li>
-          <li class="layer">
-            <span class="layer__n mono">04</span>
-            <h3>Environmental Sensing</h3>
-            <p>Temperature, humidity, light and sound levels, correlated with sleep quality.</p>
-          </li>
-          <li class="layer">
-            <span class="layer__n mono">05</span>
-            <h3>Behavioral Modeling</h3>
-            <p>Long-term, personalized models that learn what is normal for each child.</p>
-          </li>
+          <li class="layer"><span class="layer__n mono">01</span><h3 data-i18n="layer1.t">Vision Intelligence</h3><p data-i18n="layer1.p">Real-time computer vision recognizes position, posture and movement, frame by frame.</p></li>
+          <li class="layer"><span class="layer__n mono">02</span><h3 data-i18n="layer2.t">Audio Intelligence</h3><p data-i18n="layer2.p">Sound classification separates crying, coughing and ambient noise from silence.</p></li>
+          <li class="layer"><span class="layer__n mono">03</span><h3 data-i18n="layer3.t">Sleep Intelligence</h3><p data-i18n="layer3.p">Sleep and wake states become patterns, trends and a personal baseline.</p></li>
+          <li class="layer"><span class="layer__n mono">04</span><h3 data-i18n="layer4.t">Environmental Sensing</h3><p data-i18n="layer4.p">Temperature, humidity, light and sound levels, correlated with sleep quality.</p></li>
+          <li class="layer"><span class="layer__n mono">05</span><h3 data-i18n="layer5.t">Behavioral Modeling</h3><p data-i18n="layer5.p">Long-term, personalized models that learn what is normal for each child.</p></li>
         </ul>
       </div>
     </section>
@@ -193,32 +171,32 @@
     <section class="section section--alt" aria-labelledby="system-title">
       <div class="container">
         <div class="section__head reveal">
-          <p class="kicker">The BabyWatch system</p>
-          <h2 id="system-title" class="h-xl">From sensor to insight.</h2>
+          <p class="kicker" data-i18n="system.kicker">The BabyWatch system</p>
+          <h2 id="system-title" class="h-xl" data-i18n="system.title">From sensor to insight.</h2>
         </div>
         <div class="flow reveal" role="img" aria-label="System flow: Camera sends data to Edge AI, which sends events to Cloud AI, which powers the BabyWatch app">
           <div class="flow__node">
             <svg viewBox="0 0 64 64" class="flow__icon" aria-hidden="true"><rect x="14" y="10" width="36" height="44" rx="12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="30" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="30" r="3.5" fill="currentColor"/><path d="M24 54 v4 M40 54 v4" stroke="currentColor" stroke-width="2"/></svg>
-            <h3>Camera</h3>
-            <p>High-resolution video, IR night vision, microphone array, environmental sensors.</p>
+            <h3 data-i18n="flow1.t">Camera</h3>
+            <p data-i18n="flow1.p">High-resolution video, IR night vision, microphone array, environmental sensors.</p>
           </div>
           <div class="flow__link" aria-hidden="true"><span class="flow__dot"></span></div>
           <div class="flow__node">
             <svg viewBox="0 0 64 64" class="flow__icon" aria-hidden="true"><rect x="16" y="16" width="32" height="32" rx="6" fill="none" stroke="currentColor" stroke-width="2"/><rect x="26" y="26" width="12" height="12" rx="2" fill="currentColor"/><path d="M24 8v8M32 8v8M40 8v8M24 48v8M32 48v8M40 48v8M8 24h8M8 32h8M8 40h8M48 24h8M48 32h8M48 40h8" stroke="currentColor" stroke-width="2"/></svg>
-            <h3>Edge AI</h3>
-            <p>On-device neural inference. Position, movement and sound are analyzed locally, in milliseconds.</p>
+            <h3 data-i18n="flow2.t">Edge AI</h3>
+            <p data-i18n="flow2.p">On-device neural inference. Position, movement and sound are analyzed locally, in milliseconds.</p>
           </div>
           <div class="flow__link" aria-hidden="true"><span class="flow__dot"></span></div>
           <div class="flow__node">
             <svg viewBox="0 0 64 64" class="flow__icon" aria-hidden="true"><path d="M20 46 a10 10 0 0 1 -2 -19.8 A14 14 0 0 1 45 22 a9 9 0 0 1 1 18z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M24 36 h16 M28 30 h8 M26 42 h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <h3>Cloud AI</h3>
-            <p>Sleep modeling, trend analysis and personalized baselines built from event data, not raw video.</p>
+            <h3 data-i18n="flow3.t">Cloud AI</h3>
+            <p data-i18n="flow3.p">Sleep modeling, trend analysis and personalized baselines built from event data, not raw video.</p>
           </div>
           <div class="flow__link" aria-hidden="true"><span class="flow__dot"></span></div>
           <div class="flow__node">
             <svg viewBox="0 0 64 64" class="flow__icon" aria-hidden="true"><rect x="18" y="6" width="28" height="52" rx="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M28 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 34 l5 5 l11 -11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <h3>BabyWatch App</h3>
-            <p>Alerts, insights, trends and daily summaries. Understanding, not just a video feed.</p>
+            <h3 data-i18n="flow4.t">BabyWatch App</h3>
+            <p data-i18n="flow4.p">Alerts, insights, trends and daily summaries. Understanding, not just a video feed.</p>
           </div>
         </div>
       </div>
@@ -228,60 +206,48 @@
     <section class="section section--dark" id="intelligence" aria-labelledby="intel-title">
       <div class="container">
         <div class="section__head reveal">
-          <p class="kicker kicker--light">BabyWatch Intelligence™</p>
-          <h2 id="intel-title" class="h-xl">Four engines. One understanding.</h2>
-          <p class="section__lede">Purpose-built models for the moments that matter, running on the edge and in the cloud.</p>
+          <p class="kicker kicker--light" data-i18n="intel.kicker">BabyWatch Intelligence™</p>
+          <h2 id="intel-title" class="h-xl" data-i18n="intel.title">Four engines. One understanding.</h2>
+          <p class="section__lede" data-i18n="intel.lede">Purpose-built models for the moments that matter, running on the edge and in the cloud.</p>
         </div>
         <div class="engines">
           <article class="engine reveal">
-            <header class="engine__head">
-              <h3>SafeSleep AI™</h3>
-              <p>Vision models for sleep safety.</p>
-            </header>
+            <header class="engine__head"><h3 data-i18n="eng1.t">SafeSleep AI™</h3><p data-i18n="eng1.p">Vision models for sleep safety.</p></header>
             <ul class="caps" role="list">
-              <li><span>Face-covered detection</span><em class="tag tag--dev">In development</em></li>
-              <li><span>Rollover detection</span><em class="tag tag--dev">In development</em></li>
-              <li><span>Sleep-position recognition</span><em class="tag tag--core">Core</em></li>
-              <li><span>Abnormal movement detection</span><em class="tag tag--dev">In development</em></li>
+              <li><span data-i18n="eng1.c1">Face-covered detection</span><em class="tag tag--dev" data-i18n="tag.dev">In development</em></li>
+              <li><span data-i18n="eng1.c2">Rollover detection</span><em class="tag tag--dev" data-i18n="tag.dev">In development</em></li>
+              <li><span data-i18n="eng1.c3">Sleep-position recognition</span><em class="tag tag--core" data-i18n="tag.core">Core</em></li>
+              <li><span data-i18n="eng1.c4">Abnormal movement detection</span><em class="tag tag--dev" data-i18n="tag.dev">In development</em></li>
             </ul>
           </article>
           <article class="engine reveal">
-            <header class="engine__head">
-              <h3>CrySense AI™</h3>
-              <p>Audio intelligence for the nursery.</p>
-            </header>
+            <header class="engine__head"><h3 data-i18n="eng2.t">CrySense AI™</h3><p data-i18n="eng2.p">Audio intelligence for the nursery.</p></header>
             <ul class="caps" role="list">
-              <li><span>Cry detection</span><em class="tag tag--core">Core</em></li>
-              <li><span>Sound classification</span><em class="tag tag--core">Core</em></li>
-              <li><span>Abnormal sound recognition</span><em class="tag tag--dev">In development</em></li>
-              <li><span>Cry-cause interpretation</span><em class="tag tag--future">Future capability</em></li>
+              <li><span data-i18n="eng2.c1">Cry detection</span><em class="tag tag--core" data-i18n="tag.core">Core</em></li>
+              <li><span data-i18n="eng2.c2">Sound classification</span><em class="tag tag--core" data-i18n="tag.core">Core</em></li>
+              <li><span data-i18n="eng2.c3">Abnormal sound recognition</span><em class="tag tag--dev" data-i18n="tag.dev">In development</em></li>
+              <li><span data-i18n="eng2.c4">Cry-cause interpretation</span><em class="tag tag--future" data-i18n="tag.future">Future capability</em></li>
             </ul>
           </article>
           <article class="engine reveal">
-            <header class="engine__head">
-              <h3>SleepGraph™</h3>
-              <p>From nights to patterns to a personal baseline.</p>
-            </header>
+            <header class="engine__head"><h3 data-i18n="eng3.t">SleepGraph™</h3><p data-i18n="eng3.p">From nights to patterns to a personal baseline.</p></header>
             <ul class="caps" role="list">
-              <li><span>Sleep / wake recognition</span><em class="tag tag--core">Core</em></li>
-              <li><span>Sleep patterns and timelines</span><em class="tag tag--core">Core</em></li>
-              <li><span>Sleep trends over weeks</span><em class="tag tag--dev">In development</em></li>
-              <li><span>Personalized sleep model</span><em class="tag tag--future">Future capability</em></li>
+              <li><span data-i18n="eng3.c1">Sleep / wake recognition</span><em class="tag tag--core" data-i18n="tag.core">Core</em></li>
+              <li><span data-i18n="eng3.c2">Sleep patterns and timelines</span><em class="tag tag--core" data-i18n="tag.core">Core</em></li>
+              <li><span data-i18n="eng3.c3">Sleep trends over weeks</span><em class="tag tag--dev" data-i18n="tag.dev">In development</em></li>
+              <li><span data-i18n="eng3.c4">Personalized sleep model</span><em class="tag tag--future" data-i18n="tag.future">Future capability</em></li>
             </ul>
           </article>
           <article class="engine reveal">
-            <header class="engine__head">
-              <h3>BreathSense™</h3>
-              <p>Contact-free breathing movement analysis.</p>
-            </header>
+            <header class="engine__head"><h3 data-i18n="eng4.t">BreathSense™</h3><p data-i18n="eng4.p">Contact-free breathing movement analysis.</p></header>
             <ul class="caps" role="list">
-              <li><span>Breathing movement analysis</span><em class="tag tag--dev">In development</em></li>
-              <li><span>Breathing pattern trends</span><em class="tag tag--future">Future capability</em></li>
-              <li><span>Designed for contact-free, camera-based sensing</span><em class="tag tag--design">Designed for</em></li>
+              <li><span data-i18n="eng4.c1">Breathing movement analysis</span><em class="tag tag--dev" data-i18n="tag.dev">In development</em></li>
+              <li><span data-i18n="eng4.c2">Breathing pattern trends</span><em class="tag tag--future" data-i18n="tag.future">Future capability</em></li>
+              <li><span data-i18n="eng4.c3">Designed for contact-free, camera-based sensing</span><em class="tag tag--design" data-i18n="tag.design">Designed for</em></li>
             </ul>
           </article>
         </div>
-        <p class="footnote reveal">BabyWatch is not a medical device and does not diagnose, treat or prevent any condition. Capabilities marked as in development, future or designed for are not yet available.</p>
+        <p class="footnote reveal" data-i18n="intel.note">BabyWatch is not a medical device and does not diagnose, treat or prevent any condition. Capabilities marked as in development, future or designed for are not yet available.</p>
       </div>
     </section>
 
@@ -289,14 +255,14 @@
     <section class="section" aria-labelledby="evo-title">
       <div class="container">
         <div class="section__head reveal">
-          <p class="kicker">From monitoring to understanding</p>
-          <h2 id="evo-title" class="h-xl">Traditional monitors show what is happening.<br><span class="muted">BabyWatch interprets it.</span></h2>
+          <p class="kicker" data-i18n="evo.kicker">From monitoring to understanding</p>
+          <h2 id="evo-title" class="h-xl" data-i18n="evo.title">Traditional monitors show what is happening.<br><span class="muted">BabyWatch interprets it.</span></h2>
         </div>
         <ol class="evo reveal" role="list">
-          <li class="evo__step"><span class="evo__word">Monitor</span><p>Video and audio, streamed to a phone.</p></li>
-          <li class="evo__step"><span class="evo__word">Detect</span><p>Events recognized in real time: cry, movement, position.</p></li>
-          <li class="evo__step"><span class="evo__word">Understand</span><p>Patterns, context and a personalized baseline for each child.</p></li>
-          <li class="evo__step"><span class="evo__word">Predict</span><p>Anticipating needs before they become alerts. <em class="tag tag--future">Future</em></p></li>
+          <li class="evo__step"><span class="evo__word" data-i18n="evo1.w">Monitor</span><p data-i18n="evo1.p">Video and audio, streamed to a phone.</p></li>
+          <li class="evo__step"><span class="evo__word" data-i18n="evo2.w">Detect</span><p data-i18n="evo2.p">Events recognized in real time: cry, movement, position.</p></li>
+          <li class="evo__step"><span class="evo__word" data-i18n="evo3.w">Understand</span><p data-i18n="evo3.p">Patterns, context and a personalized baseline for each child.</p></li>
+          <li class="evo__step"><span class="evo__word" data-i18n="evo4.w">Predict</span><p><span data-i18n="evo4.p">Anticipating needs before they become alerts.</span> <em class="tag tag--future" data-i18n="tag.futureShort">Future</em></p></li>
         </ol>
       </div>
     </section>
@@ -305,36 +271,36 @@
     <section class="section section--dark" id="technology" aria-labelledby="arch-title">
       <div class="container">
         <div class="section__head reveal">
-          <p class="kicker kicker--light">Technology</p>
-          <h2 id="arch-title" class="h-xl">The intelligence behind BabyWatch.</h2>
-          <p class="section__lede">A layered architecture: perception at the edge, modeling in the cloud, understanding for parents.</p>
+          <p class="kicker kicker--light" data-i18n="arch.kicker">Technology</p>
+          <h2 id="arch-title" class="h-xl" data-i18n="arch.title">The intelligence behind BabyWatch.</h2>
+          <p class="section__lede" data-i18n="arch.lede">A layered architecture: perception at the edge, modeling in the cloud, understanding for parents.</p>
         </div>
         <div class="arch reveal" role="img" aria-label="Layered architecture: Perception Layer, Edge Intelligence, BabyWatch AI Engine, Parent Intelligence">
           <div class="arch__layer">
-            <div class="arch__meta"><span class="mono">L1</span><h3>Perception Layer</h3></div>
-            <ul class="arch__items" role="list"><li>Camera</li><li>Audio</li><li>Environmental sensors</li></ul>
+            <div class="arch__meta"><span class="mono">L1</span><h3 data-i18n="arch1.t">Perception Layer</h3></div>
+            <ul class="arch__items" role="list"><li data-i18n="arch1.i1">Camera</li><li data-i18n="arch1.i2">Audio</li><li data-i18n="arch1.i3">Environmental sensors</li></ul>
           </div>
           <div class="arch__arrow" aria-hidden="true"><span></span></div>
           <div class="arch__layer">
-            <div class="arch__meta"><span class="mono">L2</span><h3>Edge Intelligence</h3></div>
-            <ul class="arch__items" role="list"><li>Real-time computer vision inference</li><li>On-device audio classification</li><li>Event extraction, no raw video upload required</li></ul>
+            <div class="arch__meta"><span class="mono">L2</span><h3 data-i18n="arch2.t">Edge Intelligence</h3></div>
+            <ul class="arch__items" role="list"><li data-i18n="arch2.i1">Real-time computer vision inference</li><li data-i18n="arch2.i2">On-device audio classification</li><li data-i18n="arch2.i3">Event extraction, no raw video upload required</li></ul>
           </div>
           <div class="arch__arrow" aria-hidden="true"><span></span></div>
           <div class="arch__layer arch__layer--core">
-            <div class="arch__meta"><span class="mono">L3</span><h3>BabyWatch AI Engine</h3></div>
-            <ul class="arch__items" role="list"><li>Behavior recognition</li><li>Sleep modeling</li><li>Anomaly detection</li><li>Multimodal analysis</li></ul>
+            <div class="arch__meta"><span class="mono">L3</span><h3 data-i18n="arch3.t">BabyWatch AI Engine</h3></div>
+            <ul class="arch__items" role="list"><li data-i18n="arch3.i1">Behavior recognition</li><li data-i18n="arch3.i2">Sleep modeling</li><li data-i18n="arch3.i3">Anomaly detection</li><li data-i18n="arch3.i4">Multimodal analysis</li></ul>
           </div>
           <div class="arch__arrow" aria-hidden="true"><span></span></div>
           <div class="arch__layer">
-            <div class="arch__meta"><span class="mono">L4</span><h3>Parent Intelligence</h3></div>
-            <ul class="arch__items" role="list"><li>Alerts</li><li>Insights</li><li>Trends</li><li>Daily summaries</li></ul>
+            <div class="arch__meta"><span class="mono">L4</span><h3 data-i18n="arch4.t">Parent Intelligence</h3></div>
+            <ul class="arch__items" role="list"><li data-i18n="arch4.i1">Alerts</li><li data-i18n="arch4.i2">Insights</li><li data-i18n="arch4.i3">Trends</li><li data-i18n="arch4.i4">Daily summaries</li></ul>
           </div>
         </div>
         <div class="arch-stats reveal">
-          <div><strong><span data-count="30">0</span> fps</strong><small>Edge inference target</small></div>
-          <div><strong>&lt;<span data-count="50">0</span> ms</strong><small>On-device event latency target</small></div>
-          <div><strong><span data-count="5">0</span></strong><small>Sensing modalities</small></div>
-          <div><strong><span data-count="24">0</span>/7</strong><small>Continuous modeling</small></div>
+          <div><strong><span data-count="30">0</span> fps</strong><small data-i18n="st1">Edge inference target</small></div>
+          <div><strong>&lt;<span data-count="50">0</span> ms</strong><small data-i18n="st2">On-device event latency target</small></div>
+          <div><strong><span data-count="5">0</span></strong><small data-i18n="st3">Sensing modalities</small></div>
+          <div><strong><span data-count="24">0</span>/7</strong><small data-i18n="st4">Continuous modeling</small></div>
         </div>
       </div>
     </section>
@@ -343,8 +309,8 @@
     <section class="section" id="hardware" aria-labelledby="hw-title">
       <div class="container">
         <div class="section__head reveal">
-          <p class="kicker">Product</p>
-          <h2 id="hw-title" class="h-xl">One camera. A complete picture of your baby's world.</h2>
+          <p class="kicker" data-i18n="hw.kicker">Product</p>
+          <h2 id="hw-title" class="h-xl" data-i18n="hw.title">One camera. A complete picture of your baby's world.</h2>
         </div>
         <div class="hw">
           <div class="hw__visual reveal">
@@ -358,53 +324,46 @@
                   <linearGradient id="stand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9CCD2"/><stop offset=".5" stop-color="#F1F2F4"/><stop offset="1" stop-color="#B7BBC3"/></linearGradient>
                 </defs>
                 <ellipse cx="210" cy="486" rx="120" ry="14" fill="#0A0F1A" opacity=".08"/>
-                <!-- base -->
                 <ellipse cx="210" cy="470" rx="96" ry="16" fill="url(#stand)"/>
                 <rect x="114" y="452" width="192" height="18" rx="9" fill="url(#stand)"/>
                 <ellipse cx="210" cy="452" rx="96" ry="16" fill="#F7F7F8"/>
-                <!-- stem -->
                 <rect x="200" y="200" width="20" height="256" rx="10" fill="url(#stand)"/>
-                <!-- head: puck -->
                 <g class="hw__head">
                   <ellipse cx="210" cy="200" rx="118" ry="30" fill="#C9CCD2"/>
                   <rect x="92" y="96" width="236" height="104" rx="52" fill="url(#body)"/>
                   <ellipse cx="210" cy="96" rx="118" ry="30" fill="#FFFFFF"/>
-                  <!-- front face -->
                   <rect x="118" y="112" width="184" height="66" rx="33" fill="url(#bodyDark)"/>
                   <circle cx="210" cy="145" r="30" fill="url(#lens)"/>
                   <circle cx="210" cy="145" r="30" fill="none" stroke="#5B6678" stroke-width="1.5"/>
                   <circle cx="210" cy="145" r="12" fill="#0B1220"/>
                   <circle cx="202" cy="137" r="4" fill="#8CE8F5" opacity=".9"/>
                   <circle cx="210" cy="145" r="46" fill="url(#glow)"/>
-                  <!-- IR array -->
                   <g fill="#3E4756">
                     <circle cx="150" cy="145" r="4"/><circle cx="162" cy="133" r="3"/><circle cx="162" cy="157" r="3"/>
                     <circle cx="270" cy="145" r="4"/><circle cx="258" cy="133" r="3"/><circle cx="258" cy="157" r="3"/>
                   </g>
-                  <!-- mic array -->
                   <g fill="#7C8594"><circle cx="140" cy="106" r="1.6"/><circle cx="150" cy="104" r="1.6"/><circle cx="270" cy="104" r="1.6"/><circle cx="280" cy="106" r="1.6"/></g>
-                  <!-- status light -->
                   <rect x="204" y="184" width="12" height="3" rx="1.5" fill="#5FD3E8"><animate attributeName="opacity" values="1;.3;1" dur="2.4s" repeatCount="indefinite"/></rect>
                 </g>
               </svg>
               <div class="hw__callouts" aria-hidden="true">
-                <span class="callout" style="--x:74%;--y:22%"><i></i>Image sensor</span>
-                <span class="callout" style="--x:18%;--y:28%"><i></i>IR night vision</span>
-                <span class="callout" style="--x:70%;--y:12%"><i></i>Microphone array</span>
-                <span class="callout" style="--x:26%;--y:86%"><i></i>Environmental sensors</span>
+                <span class="callout" style="--x:74%;--y:22%"><i></i><span data-i18n="co1">Image sensor</span></span>
+                <span class="callout" style="--x:18%;--y:28%"><i></i><span data-i18n="co2">IR night vision</span></span>
+                <span class="callout" style="--x:70%;--y:12%"><i></i><span data-i18n="co3">Microphone array</span></span>
+                <span class="callout" style="--x:26%;--y:86%"><i></i><span data-i18n="co4">Environmental sensors</span></span>
               </div>
             </div>
           </div>
           <ul class="hw__features" role="list">
-            <li class="feature reveal"><h3>Camera system</h3><p>High-resolution image sensor and wide-angle optics, designed for a full view of the crib from a bedside or wall mount.</p></li>
-            <li class="feature reveal"><h3>Night vision</h3><p>Infrared illumination and low-light processing for clear video in a dark nursery, without waking your baby.</p></li>
-            <li class="feature reveal"><h3>Microphone array</h3><p>Multiple microphones for directional sound capture and robust cry and sound classification.</p></li>
-            <li class="feature reveal"><h3>Local processing</h3><p>An on-device neural processor runs vision and audio models at the edge, so events are recognized in milliseconds.</p></li>
-            <li class="feature reveal"><h3>Environmental sensors</h3><p>Temperature, humidity and ambient light, correlated with sleep to explain the "why" behind restless nights.</p></li>
-            <li class="feature reveal"><h3>Secure connectivity</h3><p>Encrypted Wi‑Fi transport and authenticated device identity, designed so only your family can see your feed.</p></li>
+            <li class="feature reveal"><h3 data-i18n="feat1.t">Camera system</h3><p data-i18n="feat1.p">High-resolution image sensor and wide-angle optics, designed for a full view of the crib from a bedside or wall mount.</p></li>
+            <li class="feature reveal"><h3 data-i18n="feat2.t">Night vision</h3><p data-i18n="feat2.p">Infrared illumination and low-light processing for clear video in a dark nursery, without waking your baby.</p></li>
+            <li class="feature reveal"><h3 data-i18n="feat3.t">Microphone array</h3><p data-i18n="feat3.p">Multiple microphones for directional sound capture and robust cry and sound classification.</p></li>
+            <li class="feature reveal"><h3 data-i18n="feat4.t">Local processing</h3><p data-i18n="feat4.p">An on-device neural processor runs vision and audio models at the edge, so events are recognized in milliseconds.</p></li>
+            <li class="feature reveal"><h3 data-i18n="feat5.t">Environmental sensors</h3><p data-i18n="feat5.p">Temperature, humidity and ambient light, correlated with sleep to explain the "why" behind restless nights.</p></li>
+            <li class="feature reveal"><h3 data-i18n="feat6.t">Secure connectivity</h3><p data-i18n="feat6.p">Encrypted Wi‑Fi transport and authenticated device identity, designed so only your family can see your feed.</p></li>
           </ul>
         </div>
-        <p class="footnote reveal">Hardware shown is a design concept. Final specifications may differ.</p>
+        <p class="footnote reveal" data-i18n="hw.note">Hardware shown is a design concept. Final specifications may differ.</p>
       </div>
     </section>
 
@@ -412,19 +371,19 @@
     <section class="section section--alt" id="privacy" aria-labelledby="privacy-title">
       <div class="container">
         <div class="section__head reveal">
-          <p class="kicker">Safety &amp; Privacy</p>
-          <h2 id="privacy-title" class="h-xl">Privacy by design.</h2>
-          <p class="section__lede">Video of a child is among the most sensitive data a family has. These are the principles BabyWatch is built on.</p>
+          <p class="kicker" data-i18n="priv.kicker">Safety &amp; Privacy</p>
+          <h2 id="privacy-title" class="h-xl" data-i18n="priv.title">Privacy by design.</h2>
+          <p class="section__lede" data-i18n="priv.lede">Video of a child is among the most sensitive data a family has. These are the principles BabyWatch is built on.</p>
         </div>
         <ul class="principles reveal" role="list">
-          <li><h3>Encrypted transmission</h3><p>Video and events are designed to travel over encrypted connections, end to end.</p></li>
-          <li><h3>Edge-first processing</h3><p>Vision and audio models run on the device wherever possible. Events, not raw footage, are what leave the home.</p></li>
-          <li><h3>User-controlled sharing</h3><p>Parents decide who can view, for how long, and can revoke access at any time.</p></li>
-          <li><h3>Secure cloud architecture</h3><p>Isolated storage, least-privilege access and audited data flows as architectural requirements.</p></li>
-          <li><h3>Strong account security</h3><p>Designed for multi-factor authentication, device-bound sessions and clear activity history.</p></li>
-          <li><h3>Privacy-first product design</h3><p>Data minimization by default. We collect what the intelligence needs, nothing more.</p></li>
+          <li><h3 data-i18n="pr1.t">Encrypted transmission</h3><p data-i18n="pr1.p">Video and events are designed to travel over encrypted connections, end to end.</p></li>
+          <li><h3 data-i18n="pr2.t">Edge-first processing</h3><p data-i18n="pr2.p">Vision and audio models run on the device wherever possible. Events, not raw footage, are what leave the home.</p></li>
+          <li><h3 data-i18n="pr3.t">User-controlled sharing</h3><p data-i18n="pr3.p">Parents decide who can view, for how long, and can revoke access at any time.</p></li>
+          <li><h3 data-i18n="pr4.t">Secure cloud architecture</h3><p data-i18n="pr4.p">Isolated storage, least-privilege access and audited data flows as architectural requirements.</p></li>
+          <li><h3 data-i18n="pr5.t">Strong account security</h3><p data-i18n="pr5.p">Designed for multi-factor authentication, device-bound sessions and clear activity history.</p></li>
+          <li><h3 data-i18n="pr6.t">Privacy-first product design</h3><p data-i18n="pr6.p">Data minimization by default. We collect what the intelligence needs, nothing more.</p></li>
         </ul>
-        <p class="footnote reveal">These are architecture principles and design goals. BabyWatch does not claim third-party certifications at this stage.</p>
+        <p class="footnote reveal" data-i18n="priv.note">These are architecture principles and design goals. BabyWatch does not claim third-party certifications at this stage.</p>
       </div>
     </section>
 
@@ -433,32 +392,16 @@
       <div class="container">
         <div class="section__head section__head--row reveal">
           <div>
-            <p class="kicker">Research &amp; Insights</p>
-            <h2 id="research-title" class="h-xl">Understanding the market we are building for.</h2>
+            <p class="kicker" data-i18n="res.kicker">Research &amp; Insights</p>
+            <h2 id="research-title" class="h-xl" data-i18n="res.title">Understanding the market we are building for.</h2>
           </div>
-          <a href="research.html" class="btn btn--ghost">All research <span aria-hidden="true">→</span></a>
+          <a href="research.html" class="btn btn--ghost" data-i18n="res.all">All research <span aria-hidden="true">→</span></a>
         </div>
         <div class="research reveal">
-          <a class="rcard" href="research.html#landscape">
-            <span class="rcard__n mono">01</span>
-            <h3>Infant Monitor Market Landscape</h3>
-            <p>Leading products in the US and China, their positioning, and where intelligence is still missing.</p>
-          </a>
-          <a class="rcard" href="research.html#china-us">
-            <span class="rcard__n mono">02</span>
-            <h3>China vs. US Smart Baby Monitor Market</h3>
-            <p>Health data versus safety events, privacy-first versus ecosystem-first, and a fivefold price gap.</p>
-          </a>
-          <a class="rcard" href="research.html#trends">
-            <span class="rcard__n mono">03</span>
-            <h3>AI Monitoring Technology Trends</h3>
-            <p>From detection to interpretation: edge AI, contact-free sensing and whole-home context.</p>
-          </a>
-          <a class="rcard" href="research.html#consumers">
-            <span class="rcard__n mono">04</span>
-            <h3>Consumer Needs &amp; Parenting Insights</h3>
-            <p>Why parents buy, what they distrust, and the mid-market gap no product currently fills.</p>
-          </a>
+          <a class="rcard" href="research.html#landscape"><span class="rcard__n mono">01</span><h3 data-i18n="rc1.t">Infant Monitor Market Landscape</h3><p data-i18n="rc1.p">Leading products in the US and China, their positioning, and where intelligence is still missing.</p></a>
+          <a class="rcard" href="research.html#china-us"><span class="rcard__n mono">02</span><h3 data-i18n="rc2.t">China vs. US Smart Baby Monitor Market</h3><p data-i18n="rc2.p">Health data versus safety events, privacy-first versus ecosystem-first, and a fivefold price gap.</p></a>
+          <a class="rcard" href="research.html#trends"><span class="rcard__n mono">03</span><h3 data-i18n="rc3.t">AI Monitoring Technology Trends</h3><p data-i18n="rc3.p">From detection to interpretation: edge AI, contact-free sensing and whole-home context.</p></a>
+          <a class="rcard" href="research.html#consumers"><span class="rcard__n mono">04</span><h3 data-i18n="rc4.t">Consumer Needs &amp; Parenting Insights</h3><p data-i18n="rc4.p">Why parents buy, what they distrust, and the mid-market gap no product currently fills.</p></a>
         </div>
       </div>
     </section>
@@ -467,30 +410,30 @@
     <section class="section section--navy" id="partners" aria-labelledby="partners-title">
       <div class="container partners">
         <div class="reveal">
-          <p class="kicker kicker--light">Partners</p>
-          <h2 id="partners-title" class="h-xl">Build the future of infant care with us.</h2>
-          <p class="section__lede">BabyWatch is building an intelligence platform, not just a camera. We work with partners across the infant care ecosystem.</p>
+          <p class="kicker kicker--light" data-i18n="part.kicker">Partners</p>
+          <h2 id="partners-title" class="h-xl" data-i18n="part.title">Build the future of infant care with us.</h2>
+          <p class="section__lede" data-i18n="part.lede">BabyWatch is building an intelligence platform, not just a camera. We work with partners across the infant care ecosystem.</p>
           <ul class="audiences" role="list">
-            <li>Maternal and infant brands</li>
-            <li>Healthcare partners</li>
-            <li>AI technology partners</li>
-            <li>Camera and sensor manufacturers</li>
-            <li>Research institutions</li>
-            <li>Distribution partners</li>
+            <li data-i18n="aud1">Maternal and infant brands</li>
+            <li data-i18n="aud2">Healthcare partners</li>
+            <li data-i18n="aud3">AI technology partners</li>
+            <li data-i18n="aud4">Camera and sensor manufacturers</li>
+            <li data-i18n="aud5">Research institutions</li>
+            <li data-i18n="aud6">Distribution partners</li>
           </ul>
         </div>
         <form class="pform reveal" id="partnerForm" aria-label="Partner inquiry">
-          <h3>Partner With BabyWatch</h3>
-          <label>Name<input type="text" name="name" required autocomplete="name"></label>
-          <label>Organization<input type="text" name="org" required autocomplete="organization"></label>
-          <label>Work email<input type="email" name="email" required autocomplete="email"></label>
-          <label>Partnership interest
+          <h3 data-i18n="form.title">Partner With BabyWatch</h3>
+          <label><span data-i18n="form.name">Name</span><input type="text" name="name" required autocomplete="name"></label>
+          <label><span data-i18n="form.org">Organization</span><input type="text" name="org" required autocomplete="organization"></label>
+          <label><span data-i18n="form.email">Work email</span><input type="email" name="email" required autocomplete="email"></label>
+          <label><span data-i18n="form.type">Partnership interest</span>
             <select name="type">
-              <option>Brand partnership</option><option>Healthcare</option><option>AI technology</option><option>Hardware / sensors</option><option>Research</option><option>Distribution</option>
+              <option data-i18n="form.o1">Brand partnership</option><option data-i18n="form.o2">Healthcare</option><option data-i18n="form.o3">AI technology</option><option data-i18n="form.o4">Hardware / sensors</option><option data-i18n="form.o5">Research</option><option data-i18n="form.o6">Distribution</option>
             </select>
           </label>
-          <button type="submit" class="btn btn--primary btn--full">Partner With BabyWatch</button>
-          <p class="pform__ok" hidden>Thank you. We will be in touch shortly.</p>
+          <button type="submit" class="btn btn--primary btn--full" data-i18n="form.btn">Partner With BabyWatch</button>
+          <p class="pform__ok" hidden data-i18n="form.ok">Thank you. We will be in touch shortly.</p>
         </form>
       </div>
     </section>
@@ -498,11 +441,11 @@
     <!-- ================= 11. FINAL CTA ================= -->
     <section class="final" aria-labelledby="final-title">
       <div class="container reveal">
-        <p class="kicker">BabyWatch AI</p>
-        <h2 id="final-title" class="display">The future of infant care is intelligent.</h2>
+        <p class="kicker" data-i18n="final.kicker">BabyWatch AI</p>
+        <h2 id="final-title" class="display" data-i18n="final.title">The future of infant care is intelligent.</h2>
         <div class="cta-row cta-row--center">
-          <a href="#technology" class="btn btn--primary">Explore the Technology</a>
-          <a href="#partners" class="btn btn--ghost">Partner With Us</a>
+          <a href="#technology" class="btn btn--primary" data-i18n="final.cta1">Explore the Technology</a>
+          <a href="#partners" class="btn btn--ghost" data-i18n="final.cta2">Partner With Us</a>
         </div>
       </div>
     </section>
@@ -513,23 +456,24 @@
     <div class="container footer__grid">
       <div class="footer__about">
         <a href="#top" class="brand"><img class="brand__mark" src="assets/logo.svg" width="28" height="28" alt=""><span class="brand__name">BabyWatch<span class="brand__ai">AI</span></span></a>
-        <p>BabyWatch is an early-stage technology company developing an AI-powered infant intelligence platform. Our mission is to move infant monitoring from watching to understanding, with privacy as a first principle.</p>
+        <p data-i18n="foot.about">BabyWatch is an early-stage technology company developing an AI-powered infant intelligence platform. Our mission is to move infant monitoring from watching to understanding, with privacy as a first principle.</p>
       </div>
       <nav class="footer__col" aria-label="Company">
-        <h4>Company</h4>
-        <a href="#product">Product</a><a href="#technology">Technology</a><a href="#intelligence">Intelligence</a><a href="#hardware">Hardware</a>
+        <h4 data-i18n="foot.company">Company</h4>
+        <a href="#product" data-i18n="nav.product">Product</a><a href="#technology" data-i18n="nav.technology">Technology</a><a href="#intelligence" data-i18n="nav.intelligence">Intelligence</a><a href="#hardware" data-i18n="foot.hardware">Hardware</a>
       </nav>
       <nav class="footer__col" aria-label="Resources">
-        <h4>Resources</h4>
-        <a href="#privacy">Safety &amp; Privacy</a><a href="research.html">Research &amp; Insights</a><a href="#partners">Partners</a><a href="#about">About</a>
+        <h4 data-i18n="foot.resources">Resources</h4>
+        <a href="#privacy" data-i18n="nav.privacy">Safety &amp; Privacy</a><a href="research.html" data-i18n="foot.research">Research &amp; Insights</a><a href="#partners" data-i18n="nav.partners">Partners</a><a href="#about" data-i18n="nav.about">About</a>
       </nav>
     </div>
     <div class="container footer__legal">
-      <p>BabyWatch is not a medical device and is not intended to diagnose, treat, cure or prevent any disease or condition. It does not replace adult supervision. Capabilities described as in development, future capability or designed for are product concepts and are not yet available.</p>
-      <p>© 2026 BabyWatch AI. All rights reserved.</p>
+      <p data-i18n="foot.legal">BabyWatch is not a medical device and is not intended to diagnose, treat, cure or prevent any disease or condition. It does not replace adult supervision. Capabilities described as in development, future capability or designed for are product concepts and are not yet available.</p>
+      <p data-i18n="foot.copy">© 2026 BabyWatch AI. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
