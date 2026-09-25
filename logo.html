@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BabyWatch Logo 预览</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { padding: 40px 0 80px; }
+    .lp { width: min(1100px, 100% - 40px); margin: 0 auto; }
+    .lp h1 { font-size: 34px; margin-bottom: 8px; }
+    .lp .sub { color: var(--ink-2); margin-bottom: 36px; }
+    .lp h2 { font-size: 20px; margin: 44px 0 16px; color: var(--ink-2); font-weight: 700; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .tile { border-radius: 20px; padding: 36px; display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 200px; box-shadow: var(--shadow); }
+    .tile--light { background: #fff; }
+    .tile--cream { background: var(--cream-2); }
+    .tile--dark { background: linear-gradient(180deg, var(--tech-bg-2), var(--tech-bg)); color: #fff; }
+    .tile--peach { background: linear-gradient(120deg, var(--peach), var(--rose) 55%, var(--sage)); }
+    .lock { display: flex; align-items: center; gap: 14px; }
+    .lock--v { flex-direction: column; gap: 10px; text-align: center; }
+    .lock .cn { font-family: var(--font-display); font-weight: 700; font-size: 26px; letter-spacing: .04em; line-height: 1; }
+    .lock .en { font-family: var(--mono); font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--ink-3); margin-top: 6px; }
+    .tile--dark .en { color: #9AA6B8; }
+    .sizes { display: flex; align-items: flex-end; gap: 28px; }
+    .sizes figure { margin: 0; text-align: center; font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+    .sizes img { margin: 0 auto 8px; }
+    .mono svg { width: 96px; height: 96px; }
+    .concept { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .concept div { background: #fff; border-radius: 16px; padding: 18px 20px; box-shadow: var(--shadow); font-size: 14px; color: var(--ink-2); }
+    .concept b { display: block; color: var(--ink); margin-bottom: 4px; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <div class="lp">
+    <h1>BabyWatch · 品牌标志</h1>
+    <p class="sub">概念：一颗温柔守望的心。爱心代表母婴的爱，中央的镜头瞳孔代表「看见」与智能监护，右上角的信号弧线代表实时守护、随时在线。</p>
+
+    <h2>主标志</h2>
+    <div class="grid">
+      <div class="tile tile--light"><img src="assets/logo.svg" width="160" height="160" alt="BabyWatch logo"></div>
+      <div class="tile tile--dark"><img src="assets/logo.svg" width="160" height="160" alt="BabyWatch logo"></div>
+      <div class="tile tile--peach"><img src="assets/logo.svg" width="160" height="160" alt="BabyWatch logo"></div>
+    </div>
+
+    <h2>横版组合（用于导航栏）</h2>
+    <div class="grid">
+      <div class="tile tile--light">
+        <div class="lock"><img src="assets/logo.svg" width="52" height="52" alt=""><div><div class="cn">宝贝守护</div><div class="en">BabyWatch</div></div></div>
+      </div>
+      <div class="tile tile--dark">
+        <div class="lock"><img src="assets/logo.svg" width="52" height="52" alt=""><div><div class="cn">宝贝守护</div><div class="en">BabyWatch</div></div></div>
+      </div>
+    </div>
+
+    <h2>竖版组合（用于海报、启动页）</h2>
+    <div class="grid">
+      <div class="tile tile--cream">
+        <div class="lock lock--v"><img src="assets/logo.svg" width="96" height="96" alt=""><div><div class="cn">宝贝守护</div><div class="en">BabyWatch</div></div></div>
+      </div>
+      <div class="tile tile--dark">
+        <div class="lock lock--v"><img src="assets/logo.svg" width="96" height="96" alt=""><div><div class="cn">宝贝守护</div><div class="en">BabyWatch</div></div></div>
+      </div>
+    </div>
+
+    <h2>不同尺寸（网站图标、App 图标）</h2>
+    <div class="tile tile--light">
+      <div class="sizes">
+        <figure><img src="assets/logo.svg" width="16" height="16" alt=""><figcaption>16px</figcaption></figure>
+        <figure><img src="assets/logo.svg" width="24" height="24" alt=""><figcaption>24px</figcaption></figure>
+        <figure><img src="assets/logo.svg" width="32" height="32" alt=""><figcaption>32px</figcaption></figure>
+        <figure><img src="assets/logo.svg" width="48" height="48" alt=""><figcaption>48px</figcaption></figure>
+        <figure><img src="assets/logo.svg" width="64" height="64" alt=""><figcaption>64px</figcaption></figure>
+        <figure><img src="assets/logo.svg" width="96" height="96" alt=""><figcaption>96px</figcaption></figure>
+      </div>
+    </div>
+
+    <h2>单色版本（印刷、水印）</h2>
+    <div class="grid mono">
+      <div class="tile tile--light">
+        <svg viewBox="0 0 64 64"><g transform="translate(1.2 4.2) scale(0.9)"><path d="M32 53 C 19 43, 10 35, 10 24.5 C 10 17.5, 15.2 12.5, 21.5 12.5 C 26.3 12.5, 30 15.3, 32 19.2 C 34 15.3, 37.7 12.5, 42.5 12.5 C 48.8 12.5, 54 17.5, 54 24.5 C 54 35, 45 43, 32 53 Z" fill="#E0776B"/><circle cx="32" cy="29" r="9" fill="#fff"/><circle cx="32" cy="29" r="4.6" fill="#E0776B"/></g><path d="M46.5 10.5 a7 7 0 0 1 5.6 5.6" fill="none" stroke="#E0776B" stroke-width="2.6" stroke-linecap="round"/><path d="M48.5 5 a12.5 12.5 0 0 1 8.9 8.9" fill="none" stroke="#E0776B" stroke-width="2.6" stroke-linecap="round" opacity=".55"/></svg>
+      </div>
+      <div class="tile tile--dark">
+        <svg viewBox="0 0 64 64"><g transform="translate(1.2 4.2) scale(0.9)"><path d="M32 53 C 19 43, 10 35, 10 24.5 C 10 17.5, 15.2 12.5, 21.5 12.5 C 26.3 12.5, 30 15.3, 32 19.2 C 34 15.3, 37.7 12.5, 42.5 12.5 C 48.8 12.5, 54 17.5, 54 24.5 C 54 35, 45 43, 32 53 Z" fill="#fff"/><circle cx="32" cy="29" r="9" fill="#10141A"/><circle cx="32" cy="29" r="4.6" fill="#fff"/></g><path d="M46.5 10.5 a7 7 0 0 1 5.6 5.6" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M48.5 5 a12.5 12.5 0 0 1 8.9 8.9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".55"/></svg>
+      </div>
+      <div class="tile tile--light">
+        <svg viewBox="0 0 64 64"><g transform="translate(1.2 4.2) scale(0.9)"><path d="M32 53 C 19 43, 10 35, 10 24.5 C 10 17.5, 15.2 12.5, 21.5 12.5 C 26.3 12.5, 30 15.3, 32 19.2 C 34 15.3, 37.7 12.5, 42.5 12.5 C 48.8 12.5, 54 17.5, 54 24.5 C 54 35, 45 43, 32 53 Z" fill="#3A2E2C"/><circle cx="32" cy="29" r="9" fill="#fff"/><circle cx="32" cy="29" r="4.6" fill="#3A2E2C"/></g><path d="M46.5 10.5 a7 7 0 0 1 5.6 5.6" fill="none" stroke="#3A2E2C" stroke-width="2.6" stroke-linecap="round"/><path d="M48.5 5 a12.5 12.5 0 0 1 8.9 8.9" fill="none" stroke="#3A2E2C" stroke-width="2.6" stroke-linecap="round" opacity=".55"/></svg>
+      </div>
+    </div>
+
+    <h2>设计说明</h2>
+    <div class="concept">
+      <div><b>爱心 · 母婴的爱</b>圆润饱满的心形，边角柔和，传递温暖与安全感。</div>
+      <div><b>瞳孔 · 看见与守护</b>心中央的镜头瞳孔来自摄像头造型，高光点让它像一只温柔注视的眼睛。</div>
+      <div><b>信号弧 · 实时在线</b>右上角两道弧线象征无线连接与实时监护，也是「Watch」的科技注脚。</div>
+      <div><b>配色 · 蜜桃珊瑚渐变</b>与网站主色一致，圆角方形底板便于用作 App 图标与社交头像。</div>
+    </div>
+  </div>
+</body>
+</html>
